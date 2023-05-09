@@ -44,7 +44,7 @@ func main() {
 		id := c.Param("id")
 		fmt.Println("Product to be deleted:", id)
 		pr.delete(ProductId(id))
-		c.JSON(http.StatusOK, "")
+		c.Status(http.StatusOK)
 	})
 
 	r.Run("localhost:9000")
